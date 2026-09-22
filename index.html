@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tímový Projekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div>
+            <div class="site-title">Tímový Projekt</div>
+            <div class="site-subtitle">FEI STU — Akademický rok 2026/2027</div>
+        </div>
+        <nav>
+            <button class="active" onclick="showTab('general', this)">Info</button>
+            <button onclick="showTab('dokumentacia', this)">Dokumentácia</button>
+            <button onclick="showTab('zapisnice', this)">Zápisnice</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- TAB: General -->
+    <div class="tab-content active" id="tab-general">
+
+        <div class="section-label" style="margin-bottom: 14px;">Členovia tímu</div>
+
+        <div class="members-grid">
+            <div class="member-card">
+                <div class="member-avatar">DV</div>
+                <div class="member-title-badge">Bc.</div>
+                <div class="member-name">Dávid Vég</div>
+                <div class="member-program">I-API-AI</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">LM</div>
+                <div class="member-title-badge">Bc.</div>
+                <div class="member-name">Lara Malíková</div>
+                <div class="member-program">I-API-AI</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">RG</div>
+                <div class="member-title-badge">Bc.</div>
+                <div class="member-name">Roman Gális</div>
+                <div class="member-program">I-API-CYBERSEC</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">MĎ</div>
+                <div class="member-title-badge">Bc.</div>
+                <div class="member-name">Marek Ďurica</div>
+                <div class="member-program">I-API-ISS</div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-avatar">MK</div>
+                <div class="member-title-badge">Bc.</div>
+                <div class="member-name">Marek Kormoš</div>
+                <div class="member-program">I-API-ISS</div>
+            </div>
+        </div>
+
+        <div class="section-label" style="margin-top: 24px; margin-bottom: 14px;">
+            Zadávateľ
+        </div>
+
+        <div class="member-card">
+            <div class="member-avatar">JP</div>
+            <div class="member-title-badge">Ing.</div>
+            <div class="member-name">Juraj Paška</div>
+        </div>
+
+        <div class="topic-card">
+            <div class="section-label">Téma projektu</div>
+
+            <div class="topic-title">
+                Hodnotenie rukou písaných skúšiek pomocou jazykových modelov – tvorba benchmarku a hodnotenie kvality prepisu
+            </div>
+
+            <div class="topic-desc">
+                <p>
+                    Študenti budú nadväzovať na nepublikovanú štúdiu
+                    <em>„Using visual AI models for automated grading of handwritten programming exams"</em>
+                    (Paška & Zajac), v ktorej sa hodnotilo 90 skutočných, ručne písaných skúšok z jazyka C jedným volaním modelu – priamo zo skenovaného obrázka po výslednú známku.
+                </p>
+
+                <p>
+                    <strong>Pozadie:</strong> Predmet „Programovanie 2" (jazyk C) má rukou písanú dozorovanú skúšku ako obranu proti podvádzaniu. Ručné hodnotenie sa pri viac ako stovke študentov ročne škáluje zle, preto sa v štúdii testovalo, či lokálne hostovaný vizuálno-jazykový model – bežiaci celý čas na infraštruktúre univerzity – dokáže hodnotiť naskenované hárky priamo, teda prepis aj bodovanie v jednom volaní.
+                </p>
+
+                <p>
+                    Funguje to, no nedokonale: oba použité modely (Qwen3.6, Gemma4) v priemere nadhodnocujú oproti ľudskému hodnotiteľovi. Analýza ukazuje, že veľkú časť tohto rozdielu nespôsobuje slabé porozumenie kódu, ale to, že model potichu prepíše, čo študent skutočne napísal – opraví chybu, ktorá opravená nebola, alebo si vymyslí celú vierohodne vyzerajúcu odpoveď na stranu, ktorú mu vôbec neukázali.
+                </p>
+            </div>
+
+            <ul class="tasks-list">
+                <li><strong>Úloha 1</strong> – Anonymizácia pomocou lokálneho modelu <em>(nezávislá)</em></li>
+                <li><strong>Úloha 2</strong> – Rozpoznávanie mena pomocou lokálneho modelu <em>(nezávislá)</em></li>
+                <li><strong>Úloha 3</strong> – Rozšírený benchmark: referenčné prepisy <em>(základ pre úlohy 4 a 5)</em></li>
+                <li><strong>Úloha 4</strong> – Overenie presnosti prepisu <em>(vyžaduje úlohu 3)</em></li>
+                <li><strong>Úloha 5</strong> – Korelácia hodnotenia pri čistých prepisoch <em>(vyžaduje úlohu 3)</em></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- TAB: Dokumentácia -->
+    <div class="tab-content" id="tab-dokumentacia">
+        <div class="section-label" style="margin-bottom: 16px;">
+            Projektová dokumentácia
+        </div>
+
+        <a class="doc-link-btn"
+           href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/MMK229/TimovyProjekt/main/dokumentacia.docx"
+           target="_blank"
+           rel="noopener">
+            📄 Zobraziť dokumentáciu
+        </a>
+    </div>
+
+    <!-- TAB: Zápisnice -->
+    <div class="tab-content" id="tab-zapisnice">
+        <div style="margin-bottom: 24px;">
+            <div class="section-label" style="margin-bottom: 4px;">Zápisnice stretnutí</div>
+        </div>
+
+        <div id="zapisnice-list"></div>
+    </div>
+
+</main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
