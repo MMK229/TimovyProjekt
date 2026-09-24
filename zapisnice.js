@@ -27,9 +27,10 @@ const defaultData = [
         author: 'Marek Ďurica',
         content: 'Základné informácie ohľadom témy – vysvetlenie a priblíženie úlohy a jej možného výstupu, administratívne veci, dohoda o tímovej komunikácii a ďalších stretnutiach.',
         tasks: [
-            'Naštudovanie problematiky',
-            'Rozdelenie úloh',
-            'Pokus rozbehnúť projekt v aktuálnom stave'
+            'Naštudovať si problematiku',
+            'Pokúsiť sa rozbehnúť projekt v aktuálnom stave na svojom počítači',
+            'Založiť metódy komunikácie (Discord, Trello), vytvoriť webstránku so zápisnicami',
+            'Informovať sa o AIS ID - či je meno dohladateľné mimo intranetu fakulty'
         ],
         prevTasks: null
     },

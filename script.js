@@ -19,7 +19,6 @@ function loadData() {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
             const stored = JSON.parse(raw);
-            // Merge: use defaultData as base, then append any extra entries added via form
             const defaultIds = new Set(defaultData.map(d => d.id));
             const extras = stored.filter(s => !defaultIds.has(s.id));
             return [...defaultData, ...extras];
@@ -60,7 +59,6 @@ function renderZapisnice() {
           <div class="zapisnica-meta">
             <span class="zapisnica-date">${z.date}</span>
             <span class="zapisnica-num">Stretnutie č. ${z.num}</span>
-            <span class="zapisnica-people">${shortAttendees}</span>
           </div>
           <span class="toggle-icon">⌄</span>
         </div>
