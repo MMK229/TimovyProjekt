@@ -34,6 +34,30 @@ const defaultData = [
         ],
         prevTasks: null
     },
+    {
+        id: 2,
+        num: 2,
+        date: '9. 10. 2026',
+        nextDate: null,
+        attendees: [
+            'Ing. Juraj Paška',
+            'Bc. Dávid Vég',
+            'Bc. Lara Malíková',
+            'Bc. Roman Gális',
+            'Bc. Marek Ďurica',
+            'Bc. Marek Kormoš'
+        ],
+        author: 'Marek Ďurica',
+        content: 'Ďalšie rozdelenie úloh po rozbehnutí projektu na svojich počítačoch. Podpis zmluvy o mlčanlivosti a dohoda ohľadom ďalšej práci s dátami.',
+        tasks: [
+            'Poslať prepisy a prihlasovacie údaje na Pyctus server',
+            'Pozrieť či začierňovanie mien robiť manuálne alebo cez model',
+            'Založiť Gitlab repo (zatiaľ stačí Hello World)',
+            'Odpojenie PDF súborov od repa',
+            'Vytvoriť možnosť na stránke vytvárať zápisnice počas stretnutia'
+        ],
+        prevTasks: null
+    },
 
     // Pridajte ďalšie zápisnice sem:
     // {
