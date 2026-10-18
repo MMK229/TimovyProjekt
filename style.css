@@ -87,7 +87,6 @@ main {
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* General tab */
 .section-label {
     font-size: 11px;
     font-weight: 600;
@@ -104,13 +103,6 @@ main {
     border-radius: var(--radius);
     padding: 24px 28px;
     margin-bottom: 28px;
-}
-
-.topic-card h2 {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--blue);
-    margin-bottom: 6px;
 }
 
 .topic-title {
@@ -131,8 +123,6 @@ main {
     margin-bottom: 12px;
 }
 
-.topic-desc p:last-child { margin-bottom: 0; }
-
 .tasks-list {
     margin-top: 16px;
     padding-left: 0;
@@ -148,6 +138,8 @@ main {
     padding: 10px 14px;
     font-size: 14px;
     color: var(--text);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .tasks-list li strong {
@@ -194,7 +186,6 @@ main {
     padding: 2px 6px;
     display: inline-block;
     margin-bottom: 4px;
-    letter-spacing: 0.03em;
 }
 
 .member-name {
@@ -209,81 +200,7 @@ main {
     color: var(--text-muted);
 }
 
-/* Dokumentacia tab */
-.doc-frame-wrapper {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-
-.doc-info-bar {
-    background: var(--blue-light);
-    border-bottom: 1px solid var(--border);
-    padding: 12px 20px;
-    font-size: 13px;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.doc-icon {
-    font-size: 18px;
-}
-
-.doc-placeholder {
-    padding: 48px 32px;
-    text-align: center;
-    color: var(--text-muted);
-}
-
-.doc-placeholder .big-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-    opacity: 0.5;
-}
-
-.doc-placeholder h3 {
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 8px;
-}
-
-.doc-placeholder p {
-    font-size: 14px;
-    max-width: 480px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-}
-
-.doc-link-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--blue);
-    color: var(--white);
-    text-decoration: none;
-    padding: 9px 20px;
-    border-radius: var(--radius);
-    font-size: 14px;
-    font-weight: 500;
-    transition: background 0.15s;
-}
-
-.doc-link-btn:hover {
-    background: var(--blue-mid);
-}
-
 /* Zapisnice tab */
-.zapisnice-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-}
-
 .zapisnica-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -303,9 +220,7 @@ main {
     transition: background 0.1s;
 }
 
-.zapisnica-header:hover {
-    background: var(--bg);
-}
+.zapisnica-header:hover { background: var(--bg); }
 
 .zapisnica-meta {
     display: flex;
@@ -329,11 +244,6 @@ main {
     color: var(--text);
 }
 
-.zapisnica-people {
-    font-size: 13px;
-    color: var(--text-muted);
-}
-
 .toggle-icon {
     font-size: 18px;
     color: var(--text-muted);
@@ -341,9 +251,7 @@ main {
     transition: transform 0.2s;
 }
 
-.zapisnica-card.open .toggle-icon {
-    transform: rotate(180deg);
-}
+.zapisnica-card.open .toggle-icon { transform: rotate(180deg); }
 
 .zapisnica-body {
     display: none;
@@ -351,17 +259,13 @@ main {
     padding: 24px 24px 20px;
 }
 
-.zapisnica-card.open .zapisnica-body {
-    display: block;
-}
+.zapisnica-card.open .zapisnica-body { display: block; }
 
 .zapisnica-section {
     margin-bottom: 18px;
 }
 
-.zapisnica-section:last-child {
-    margin-bottom: 0;
-}
+.zapisnica-section:last-child { margin-bottom: 0; }
 
 .zapisnica-section h4 {
     font-size: 12px;
@@ -372,22 +276,20 @@ main {
     margin-bottom: 8px;
 }
 
+/* Dôsledné zalamovanie dlhého textu v zápisniciach */
+.zapisnica-section ul li, .zapisnica-section p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .zapisnica-section ul {
     padding-left: 18px;
-    color: var(--text-muted);
-    font-size: 14.5px;
-    line-height: 1.7;
 }
 
-.zapisnica-section ul li {
-    margin-bottom: 4px;
-}
-
-.zapisnica-section p {
-    font-size: 14.5px;
-    color: var(--text-muted);
-    line-height: 1.7;
-}
+.zapisnica-section ul li { margin-bottom: 4px; }
 
 .zapisnica-footer {
     margin-top: 16px;
@@ -395,6 +297,7 @@ main {
     border-top: 1px solid var(--border);
     font-size: 13px;
     color: var(--text-muted);
+    word-break: break-word;
 }
 
 .empty-state {
@@ -404,11 +307,7 @@ main {
     font-size: 14px;
 }
 
-.empty-state .icon {
-    font-size: 36px;
-    margin-bottom: 12px;
-    opacity: 0.4;
-}
+.empty-state .icon { font-size: 36px; margin-bottom: 12px; opacity: 0.4; }
 
 .add-btn {
     background: var(--blue);
@@ -427,13 +326,26 @@ main {
 
 .add-btn:hover { background: var(--blue-mid); }
 
+.cancel-btn {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: background 0.15s;
+}
+
+.cancel-btn:hover { background: var(--bg); }
+
 /* Add form */
 .add-form {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .add-form h3 {
@@ -456,9 +368,7 @@ main {
     gap: 5px;
 }
 
-.form-group.full {
-    grid-column: 1 / -1;
-}
+.form-group.full { grid-column: 1 / -1; }
 
 label {
     font-size: 12px;
@@ -491,21 +401,113 @@ textarea { resize: vertical; min-height: 80px; }
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-    margin-top: 6px;
+    margin-top: 16px;
 }
 
-.cancel-btn {
-    background: none;
+/* Checkboxes for attendees - mriežka */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px 12px;
+    background: var(--bg);
     border: 1px solid var(--border);
-    padding: 8px 16px;
-    border-radius: var(--radius);
-    font-size: 14px;
-    cursor: pointer;
-    color: var(--text-muted);
-    transition: background 0.15s;
+    border-radius: 6px;
+    padding: 12px 14px;
 }
 
-.cancel-btn:hover { background: var(--bg); }
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--text);
+    text-transform: none;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--blue);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Dynamic task rows */
+.task-row-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.remove-task-btn {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 0 12px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.remove-task-btn:hover { background: #f5c6cb; }
+
+/* Modal popup */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 650px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+.modal-content p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.modal-textarea {
+    width: 100%;
+    height: 220px;
+    font-family: monospace;
+    font-size: 13px;
+    background: #f4f6fa;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
 
 @media (max-width: 640px) {
     header { padding: 0 16px; }
