@@ -58,6 +58,28 @@ const defaultData = [
         ],
         prevTasks: null
     },
+    {
+        id: 1793118696966,
+        num: 3,
+        date: '27. 10. 2026',
+        nextDate: null,
+        attendees: [
+            'Bc. Dávid Vég',
+            'Bc. Lara Malíková',
+            'Bc. Roman Gális',
+            'Bc. Marek Ďurica',
+            'Bc. Marek Kormoš'
+        ],
+        author: 'Marek Ďurica',
+        content: 'Prezentácia a analýza dosiahnutých výsledkov z predchádzajúcich úloh. Prerábanie GitLab projektu podľa novej štruktúry a doladenie štruktúry ručných prepisov do formátu json.',
+        tasks: [
+            'Pokúsiť sa o nasadenie stránky na Pyctus',
+            'Začierňovanie mena (Spôsoby anonymizácie)',
+            'Ručný prepis písomiek a následné porovnanie s prepisom modelu',
+            'Pokračovanie v analýzy modelov'
+        ],
+        prevTasks: null
+    },
 
     // Pridajte ďalšie zápisnice sem:
     // {
